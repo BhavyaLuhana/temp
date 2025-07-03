@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>All Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>All Users</h2>
+
+        {% if users %}
+        <ul>
+            {% for user in users %}
+            {% if 'Photo' in user and user['Photo'] %}
+            <li>
+                <strong>{{ user['Name'] }}</strong> | {{ user['Phone'] }}<br>
+                <img src="{{ url_for('static', filename='../photos/' + user['Photo']) }}" width="100"
+                    alt="User Photo"><br>
+                <a href="{{ url_for('delete', photo=user['Photo']) }}" onclick="return confirm('Are you sure?')">🗑
+                    Delete</a>
+                <hr>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No users found.</p>
+        {% endif %}
+
+        <a class="view-link" href="{{ url_for('index') }}">← Back to Add User</a>
+    </div>
+</body>
+
+</html>

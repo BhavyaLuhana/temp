@@ -1,0 +1,142 @@
+/* Reset + Base Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 40px;
+    color: #333;
+}
+
+/* Container for both pages */
+.form-container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Form Labels + Inputs */
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 15px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+form input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* Flash Messages */
+.flash-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #c3e6cb;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Link to other pages */
+a.view-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.2s;
+}
+
+a.view-link:hover {
+    color: #21618c;
+    text-decoration: underline;
+}
+
+/* User List Styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 25px;
+}
+
+li img {
+    margin-top: 10px;
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+li a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+li a:hover {
+    background: #c0392b;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
